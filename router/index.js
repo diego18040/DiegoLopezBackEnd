@@ -1,8 +1,9 @@
 import { Router } from "express";
-import usersRouter from './users.js';
+import usersTienda from './tienda.js';
 
 const routerIndex = Router()
 
-routerIndex.use('/users',usersRouter)
+routerIndex.use('/users',usersTienda)
+
 
 export default routerIndex;

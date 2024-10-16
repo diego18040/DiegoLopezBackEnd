@@ -7,8 +7,9 @@
   "scripts": {
     "start": "node ./server.js",
     "dev": "nodemon ./server.js",
-    "dataUsers": "node ./models/data/users.js",
-    "dataAutos": "node ./models/data/autos.js"
+    "dataTienda": "node ./models/data/tienda.js",
+    "dataProducto": "node ./models/data/producto.js",
+    "dataEmpleado": "node ./models/data/empleado.js"
   },
   "keywords": [],
   "author": "",

@@ -1,10 +1,10 @@
-import User from '../../models/User.js';
+import Producto from '../../models/Producto.js';
 
-let allUser = async (req, res) => {
+let allProducto = async (req, res) => {
         try {
             console.log(req.params);
 
-            let all = await User.find()
+            let all = await Producto.find()
             return res.status(200).json({
                 response: all
             })
@@ -16,10 +16,10 @@ let allUser = async (req, res) => {
 
     }
 
-let userByRole =async (req,res) =>{
+let ProbuctobyNombre=async (req,res) =>{
     try {
-        let roleQuery = req.params.x
-        let all = await User.find( {role:roleQuery} )
+        let nameQuery = req.params.x
+        let all = await Producto.find( {Nombre:nameQuery} )
         return res.status(200).json({
             response: all
         })
@@ -29,4 +29,4 @@ let userByRole =async (req,res) =>{
         })
     }
 }
-export  { allUser,userByRole }
+export  { allProducto,ProbuctobyNombre }

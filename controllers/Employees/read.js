@@ -1,10 +1,10 @@
-import Empleado from "../../models/Empleado";
+import Employee from "../../models/Employee.js";
 
-let allEmpleado = async (req, res) => {
+let allEmployee = async (req, res) => {
         try {
             console.log(req.params);
 
-            let all = await Empleado.find()
+            let all = await Employee.find()
             return res.status(200).json({
                 response: all
             })
@@ -16,10 +16,10 @@ let allEmpleado = async (req, res) => {
 
     }
 
-let EmpleadobyNombre=async (req,res) =>{
+let Employeebyname = async (req,res) =>{
     try {
         let nameQuery = req.params.x
-        let all = await Empleado.find( {Nombre:nameQuery} )
+        let all = await Employee.find( {name:nameQuery} )
         return res.status(200).json({
             response: all
         })
@@ -29,4 +29,4 @@ let EmpleadobyNombre=async (req,res) =>{
         })
     }
 }
-export  { allEmpleado,EmpleadobyNombre }
+export  { allEmployee,Employeebyname }

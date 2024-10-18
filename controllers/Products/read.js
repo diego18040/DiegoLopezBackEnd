@@ -1,10 +1,10 @@
-import Tienda from '../../models/Tienda.js';
+import Product from '../../models/Product.js';
 
-let allTienda = async (req, res) => {
+let allProduct = async (req, res) => {
         try {
             console.log(req.params);
 
-            let all = await Tienda.find()
+            let all = await Product.find()
             return res.status(200).json({
                 response: all
             })
@@ -16,10 +16,10 @@ let allTienda = async (req, res) => {
 
     }
 
-let TiendabyNombre=async (req,res) =>{
+let Productbyname = async (req,res) =>{
     try {
         let nameQuery = req.params.x
-        let all = await Tienda.find( {Nombre:nameQuery} )
+        let all = await Product.find( {name:nameQuery} )
         return res.status(200).json({
             response: all
         })
@@ -29,6 +29,4 @@ let TiendabyNombre=async (req,res) =>{
         })
     }
 }
-
-
-export  { allTienda,TiendabyNombre }
+export  { allProduct,Productbyname }

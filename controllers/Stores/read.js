@@ -1,10 +1,10 @@
-import Producto from '../../models/Producto.js';
+import Store from '../../models/Store.js';
 
-let allProducto = async (req, res) => {
+let allStore = async (req, res) => {
         try {
             console.log(req.params);
 
-            let all = await Producto.find()
+            let all = await Store.find()
             return res.status(200).json({
                 response: all
             })
@@ -16,10 +16,10 @@ let allProducto = async (req, res) => {
 
     }
 
-let ProbuctobyNombre=async (req,res) =>{
+let Storebyname = async (req,res) =>{
     try {
         let nameQuery = req.params.x
-        let all = await Producto.find( {Nombre:nameQuery} )
+        let all = await Store.find( {name:nameQuery} )
         return res.status(200).json({
             response: all
         })
@@ -29,4 +29,6 @@ let ProbuctobyNombre=async (req,res) =>{
         })
     }
 }
-export  { allProducto,ProbuctobyNombre }
+
+
+export  { allStore,Storebyname }

@@ -7,7 +7,7 @@ import indexRouter from "./router/index.js";
 
 const server = express()
 const PORT = process.env.PORT || 8080 // por default el # puerto//
-const ready = ()=> console.log("server ready in port :"+PORT);
+const ready = ()=> console.log(`Server running on port: ${PORT}`);
 
 server.use(express.json())
 server.use(express.urlencoded({ extended: true }))

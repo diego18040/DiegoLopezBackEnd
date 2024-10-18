@@ -2,7 +2,7 @@ import 'dotenv/config.js'
 import '../../config/database.js'
 import Store from '../Store.js';
 
-let store = [
+let stores = [
 
 {
     name: "Liverpool",
@@ -32,4 +32,4 @@ let store = [
 
 ];
 
-Store.insertMany(store)
+Store.insertMany(stores)

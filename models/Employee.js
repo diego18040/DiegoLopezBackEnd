@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-let collection ='employee'
+let collection ='employees'
 let schema = new Schema({
     id:{type:String,required:true},
     name:{type:String,required:true},

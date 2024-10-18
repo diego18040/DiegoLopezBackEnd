@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-let collection ='product'
+let collection ='products'
 let schema = new Schema({
     name:{type:String,required:true},
     brand:{type:String,required:true},
@@ -10,6 +10,6 @@ let schema = new Schema({
 },{
     timestamps: true
 })
-let Producto = model(collection,schema)
+let Product = model(collection,schema)
 
-export default Producto
+export default Product

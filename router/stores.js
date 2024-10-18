@@ -1,11 +1,15 @@
 import { Router } from "express";
-import {allStore,Storebyname,} from "../controllers/Stores/read.js";
+import {allStore,Storebyname,Storebyadress} from "../controllers/Stores/read.js";
+import { create,createMany } from "../controllers/Stores/create.js";
+const router = Router()
 
-const routerUser = Router()
+router.get('/all', allStore)
+router.get('/name/:name',Storebyname)
+router.get('/address/:address', Storebyadress);
+router.post('/create',create);
+router.post('/createMany',createMany);
 
-routerUser.get('/all', allStore)
-routerUser.get('/name/:x',Storebyname)
+ 
 
 
-
-export default routerUser
+export default router

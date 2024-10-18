@@ -1,6 +1,6 @@
 import Store from "../../models/Store.js";
-
-let create = async (req, res, next) => {
+import conflictMiddleware from "../../middlewares/conflict_Middleware.js";
+let create  = async (req, res, next) => {
     try {
         let store = req.body;
         let newStore = await Store.create(store);

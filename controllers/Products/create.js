@@ -1,5 +1,5 @@
 import Product from '../../models/Product.js';
-
+import conflictMiddleware from '../../middlewares/conflict_Middleware.js';
 let create = async (req, res, next) => {
     try {
         let product = req.body;

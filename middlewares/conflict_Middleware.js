@@ -5,7 +5,7 @@ const conflictMiddleware = async (req, res, next) => {
         const { id } = req.body;
         
         // Verifica si ya existe un empleado con el mismo `id`
-        const existingEmployee = await Employee.findOne({ id });
+        const existingEmployee = await Employee.find({ id });
 
         if (existingEmployee) {
             return res.status(409).json({

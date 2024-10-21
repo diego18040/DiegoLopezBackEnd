@@ -9,6 +9,6 @@ router.get('/name/:name', Employeebyname);
 router.get('/salary/:salary',Employeebysalary);
 router.get('/position/:position',Employeebyposition);
 router.post('/create',conflictMiddleware,create);
-router.post('/createMany',conflictMiddleware,createMany);
+router.post('/createMany',conflictMiddleware,createMany); // todo en una sola operacion
 
 export default router;

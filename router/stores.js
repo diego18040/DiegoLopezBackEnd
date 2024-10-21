@@ -8,7 +8,7 @@ router.get('/all', allStore)
 router.get('/name/:name',Storebyname)
 router.get('/address/:address', Storebyadress);
 router.post('/create',conflictMiddleware,create);
-router.post('/createMany',conflictMiddleware,createMany);
+router.post('/createMany',conflictMiddleware,createMany); // todo en una sola operacion
 
  
 
